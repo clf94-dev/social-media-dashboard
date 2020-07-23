@@ -48,6 +48,10 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
+  background-color: #1e202a;
+}
+
+input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -69,8 +73,44 @@ input:checked + .slider:before {
   background-color: #f5f7ff;
 }
 
+#top .cont-top {
+  padding: 1% 2%;
+}
+
 #top .card {
   background-color: #f0f2fa;
+  border-color: #f0f2fa;
+  text-align: center;
+}
+
+#top .card h3 {
+  padding: 2% 0;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+#top .card.facebook-card {
+  border-top-color: #198ff5;
+  border-top-width: 5px;
+}
+
+#top .card.twitter-card {
+  border-top-color: #1ca0f2;
+  border-top-width: 5px;
+}
+
+#top .card.instagram-card {
+  border-top-color: linear gradient(to right, #fdc468, #df4996);
+  border-top-width: 5px;
+}
+
+#top .card.youtube-card {
+  border-top-color: #c4032a;
+  border-top-width: 5px;
+}
+
+#top .card .card-body {
+  padding: 1% 35%;
 }
 
 #top .up-color {
@@ -106,15 +146,53 @@ input:checked + .slider:before {
 }
 
 .dark-mode-top input {
-  background-imag: linear gradient(90deg, #378fe6, #3eda82);
+  background-image: linear gradient(90deg, #378fe6, #3eda82);
 }
 
 #middle {
   background-color: white;
 }
 
+#middle .cont-middle {
+  padding: 5% 2%;
+}
+
 #middle .card {
   background-color: #f0f2fa;
+  border-color: #f0f2fa;
+  margin: 2% auto;
+}
+
+#middle .card .card-body {
+  padding: 7% 10%;
+}
+
+#middle .card .card-body .row {
+  padding: 2% 0 5% 0;
+}
+
+#middle .card .card-body .row h4 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#middle .card .card-body .row .icon {
+  position: absolute;
+  left: 80%;
+  height: 25px;
+  width: 25px;
+}
+
+#middle .card .card-body .row .up-position {
+  position: absolute;
+  left: 75%;
+  height: 15px;
+  width: 15px;
+}
+
+#middle .card .card-body .row .up-position-text {
+  position: absolute;
+  left: 80%;
 }
 
 #middle .up-color {
@@ -140,4 +218,28 @@ input:checked + .slider:before {
 
 .dark-mode-card {
   background-color: #252a41;
+}
+
+.dark-border-card {
+  border-color: #252a41 !important;
+}
+
+.dark-border-card.facebook-card {
+  border-top-color: #198ff5 !important;
+  border-top-width: 5px;
+}
+
+.dark-border-card.twitter-card {
+  border-top-color: #1ca0f2 !important;
+  border-top-width: 5px;
+}
+
+.dark-border-card.instagram-card {
+  border-top-color: linear gradient(to right, #fdc468, #df4996) !important;
+  border-top-width: 5px;
+}
+
+.dark-border-card.youtube-card {
+  border-top-color: #c4032a !important;
+  border-top-width: 5px;
 }

@@ -2,7 +2,6 @@ $lime-green:hsl(163, 72%, 41%);
 $bright-red:hsl(356, 69%, 56%);
 $facebook-col: hsl(208, 92%, 53%);
 $twitter-col: hsl(203, 89%, 53%);
-$instagram-col: linear gradient( hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
 $youtube-col: hsl(348, 97%, 39%);
 $toggle-col-light: hsl(230, 22%, 74%);
 $toggle-col-dark:(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
@@ -69,6 +68,9 @@ $font-weight-bold:700;
 
 input:checked+.slider {
     background-color: hsl(146, 68%, 55%);
+    &:before {
+        background-color: $d-very-darkblue-bg;
+    }
 }
 
 input:checked+.slider:before {
@@ -87,10 +89,40 @@ input:checked+.slider:before {
     }
 }
 
+// ----------------------------top------------------------------------
 #top {
     background-color: $l-very-paleblue-topbg;
+    .cont-top {
+        padding: 1% 2%;
+    }
     .card {
         background-color: $l-light-grayishblue-cardbg;
+        border-color: $l-light-grayishblue-cardbg;
+        text-align: center;
+        h3 {
+            padding: 2% 0;
+            font-size: 45px;
+            font-weight: $font-weight-bold;
+        }
+        &.facebook-card {
+            border-top-color: $facebook-col;
+            border-top-width: 5px;
+        }
+        &.twitter-card {
+            border-top-color: $twitter-col;
+            border-top-width: 5px;
+        }
+        &.instagram-card {
+            border-top-color: linear gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+            border-top-width: 5px;
+        }
+        &.youtube-card {
+            border-top-color: $youtube-col;
+            border-top-width: 5px;
+        }
+        .card-body {
+            padding: 1% 35%;
+        }
     }
     .up-color {
         color: $lime-green;
@@ -118,14 +150,47 @@ input:checked+.slider:before {
         color: $d-desaturatedblue-text;
     }
     input {
-        background-imag: linear gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+        background-image: linear gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     }
+    .card {}
 }
 
+//-----------------------------------middle-------------------
 #middle {
     background-color: $l-white-bg;
+    .cont-middle {
+        padding: 5% 2%;
+    }
     .card {
         background-color: $l-light-grayishblue-cardbg;
+        border-color: $l-light-grayishblue-cardbg;
+        margin: 2% auto;
+        .card-body {
+            padding: 7% 10%;
+            .row {
+                padding: 2% 0 5% 0;
+                h4 {
+                    font-size: 30px;
+                    font-weight: $font-weight-bold;
+                }
+                .icon {
+                    position: absolute;
+                    left: 80%;
+                    height: 25px;
+                    width: 25px;
+                }
+                .up-position {
+                    position: absolute;
+                    left: 75%;
+                    height: 15px;
+                    width: 15px;
+                }
+                .up-position-text {
+                    position: absolute;
+                    left: 80%;
+                }
+            }
+        }
     }
     .up-color {
         color: $lime-green;
@@ -148,4 +213,24 @@ input:checked+.slider:before {
 
 .dark-mode-card {
     background-color: $d-dark-saturatedblue-cardbg;
+}
+
+.dark-border-card {
+    border-color: $d-dark-saturatedblue-cardbg !important;
+    &.facebook-card {
+        border-top-color: $facebook-col !important;
+        border-top-width: 5px;
+    }
+    &.twitter-card {
+        border-top-color: $twitter-col !important;
+        border-top-width: 5px;
+    }
+    &.instagram-card {
+        border-top-color: linear gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) !important;
+        border-top-width: 5px;
+    }
+    &.youtube-card {
+        border-top-color: $youtube-col !important;
+        border-top-width: 5px;
+    }
 }
